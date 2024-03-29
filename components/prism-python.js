@@ -37,8 +37,7 @@ Prism.languages.python = {
 		greedy: true
 	},
 	'function': {
-		pattern: /((?:^|\s)def[ \t]+)[a-zA-Z_]\w*(?=\s*\()/g,
-		lookbehind: true
+		pattern: /[a-zA-Z_]\w*(?=\s*\()/g,
 	},
 	'class-name': {
 		pattern: /(\bclass\s+)\w+/i,
