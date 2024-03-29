@@ -5,6 +5,10 @@
 	src: url(https://lea.verou.me/logo.otf);
 	font-family: 'LeaVerou';
 }
+@font-face {
+	src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2') format('woff2');
+	font-family: 'JetBrains Mono';
+}
 
 /*
  Shared styles

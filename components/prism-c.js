@@ -22,13 +22,13 @@ Prism.languages.c = Prism.languages.extend('clike', {
 	'keyword': /\b(?:_Alignas|_Alignof|_Atomic|_Bool|_Complex|_Generic|_Imaginary|_Noreturn|_Static_assert|_Thread_local|__attribute__|asm|auto|break|case|const|continue|default|do|else|enum|extern|for|goto|if|inline|register|return|signed|sizeof|static|struct|switch|typedef|typeof|union|unsigned|volatile|while)\b/,
 	'function': /\b[a-z_]\w*(?=\s*\()/i,
 	'number': /(?:\b0x(?:[\da-f]+(?:\.[\da-f]*)?|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?)[ful]{0,4}/i,
-	'operator': />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?/,
 	'variable': [
 		{
 			// struct members
 			pattern: /(?:\.|->)\s*[a-zA-Z_]\w*/,
 		}
-	]
+	],
+	'operator': />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?/,
 });
 
 Prism.languages.insertBefore('c', 'string', {
