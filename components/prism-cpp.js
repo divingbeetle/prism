@@ -33,6 +33,12 @@
 		},
 		'operator': />>=?|<<=?|->|--|\+\+|&&|\|\||[?:~]|<=>|[-+*/%&|^!=<>]=?|\b(?:and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\b/,
 		'boolean': /\b(?:false|true)\b/
+		'variable': [
+			{
+				// struct members
+				pattern: /(?:\.|->)\s*[a-zA-Z_]\w*/
+			}
+		]
 	});
 
 	Prism.languages.insertBefore('cpp', 'string', {

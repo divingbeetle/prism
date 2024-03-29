@@ -23,6 +23,12 @@ Prism.languages.c = Prism.languages.extend('clike', {
 	'function': /\b[a-z_]\w*(?=\s*\()/i,
 	'number': /(?:\b0x(?:[\da-f]+(?:\.[\da-f]*)?|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?)[ful]{0,4}/i,
 	'operator': />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?/
+	'variable': [
+		{
+			// struct members
+			pattern: /(?:\.|->)\s*[a-zA-Z_]\w*/
+		}
+	]
 });
 
 Prism.languages.insertBefore('c', 'string', {
