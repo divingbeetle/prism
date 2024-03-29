@@ -1,27 +1,53 @@
 /**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
+ * Custom defualt theme for Prism.js 
+ * Based on Gurvchad (https://github.com/NvChad/base46/blob/v2.5/lua/base46/themes/gruvchad.lua)
  */
+
+/*
+* Base16 Gruvchad Colors 
+* Modified for personal usage 
+*
+* base00: #1e2122;   Default bg, black 
+* base01: #2c3f40;   Light bg 
+* base02: #36393a;   Selection bg
+* base03: #999999;   Comments, Invisibles 
+* base04: #d4be98;   Dark fg 
+* base05: #c0b196;   Default fg 
+* base06: #c3b499;   Light fg 
+* base07: #c7b89d;   Light bg 
+* base08: #ec6b64;   Red 
+* base09: #e78a4e;   Orange 
+* base0A: #e0c080;   Yellow 
+* base0B: #a9b665;   Vibrant green 
+* base0C: #86b17f;   Green 
+* base0D: #7daea3;   Teal 
+* base0E: #d3869b;   Dark pink 
+* base0F: #d65d0e;   Dark orange 
+* grey:   #575a5b;   Grey
+*
+*/
+
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
+	color: #c0b196;
 	background: none;
-	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	text-shadow: none;
+    font-family: JetBrains Mono, D2Coding, 'D2 coding', Consolas, monospace;
+	font-size: 13px;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: 1.2;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
 
+	font-feature-settings: 'liga' on, 'calt' on; 
+    -webkit-font-feature-settings: 'liga' on, 'calt' on;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
@@ -31,13 +57,13 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: #36393a;
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: #36393a;
 }
 
 @media print {
@@ -56,7 +82,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+	background: #1e2122;
 }
 
 /* Inline code */
@@ -66,65 +92,81 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
+/* Tokens */ 
+
+/* base03 */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: #999999;
 }
 
+/* base05: Default fg */
+.token.operator,
+.token.expression {
+	color: #c0b196;
+}
+
+/* base08 */
+.token.tag,
+.token.attr-name,
+.token.char,
+.token.entity,
+.token.property,
+.token.constant,
+.token.namespace,
+.token.macro-name,
+.token.macro-name.function,
+.token.deleted {
+	color: #ec6b64;
+}
+
+/* base09 */ 
+.token.boolean, 
+.token.number, 
+.token.symbol {
+	color: #e78a4e;
+}
+
+/* base0A */ 
+.token.class-name {
+	color: #e0c080;
+}
+
+/* base0B */
+.token.string,
+.token.insterted,
+.token.attr-value,
+
+.token.variable {
+	color: #a9b665;
+}
+
+/* base0C */ 
+.token.regex {
+	color: #86b17f;
+}
+
+/* base0D */ 
+.token.function,
+.token.macro.property {
+	color: #7daea3;
+}
+
+/* base0E */ 
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.directive-hash,
+.token.builtin {
+	color: #d3869b;
+}
+
+/* base0F */ 
 .token.punctuation {
 	color: #999;
-}
-
-.token.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #905;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #690;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-	color: #9a6e3a;
-	/* This background color was intended by the author of this theme. */
-	background: hsla(0, 0%, 100%, .5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	color: #07a;
-}
-
-.token.function,
-.token.class-name {
-	color: #DD4A68;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-	color: #e90;
 }
 
 .token.important,
