@@ -27,7 +27,6 @@ Prism.languages.c = Prism.languages.extend('clike', {
 		{
 			// struct members
 			pattern: /(?:\.|->)\s*[a-zA-Z_]\w*/,
-			lookbehind: true
 		}
 	]
 });

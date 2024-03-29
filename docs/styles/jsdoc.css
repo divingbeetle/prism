@@ -762,4 +762,8 @@ html[data-search-mode] .level-hide {
     font-weight: 300;
     font-style: normal;
 
+@font-face {
+		font-family: 'JetBrains Mono';
+		src: url('../fonts/JetBrains-Mono/JetBrainsMono-Medium.woff2') format('woff2');
+	}
 }

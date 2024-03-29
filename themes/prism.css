@@ -138,7 +138,6 @@ pre[class*="language-"] {
 .token.string,
 .token.insterted,
 .token.attr-value,
-
 .token.variable {
 	color: #a9b665;
 }
@@ -166,7 +165,7 @@ pre[class*="language-"] {
 
 /* base0F */ 
 .token.punctuation {
-	color: #999;
+	color: #d65d0e;
 }
 
 .token.important,
