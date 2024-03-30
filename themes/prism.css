@@ -27,7 +27,6 @@
 *
 */
 
-
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #c0b196;
@@ -109,7 +108,6 @@ pre[class*="language-"] {
 }
 
 /* base08 */
-.token.tag,
 .token.attr-name,
 .token.char,
 .token.entity,
@@ -130,6 +128,9 @@ pre[class*="language-"] {
 }
 
 /* base0A */ 
+.token.tag,
+.token.selector,
+.token.atrule,
 .token.class-name {
 	color: #e0c080;
 }
@@ -154,9 +155,7 @@ pre[class*="language-"] {
 }
 
 /* base0E */ 
-.token.selector,
 .token.important,
-.token.atrule,
 .token.keyword,
 .token.directive-hash,
 .token.builtin {
