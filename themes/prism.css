@@ -116,6 +116,7 @@ pre[class*="language-"] {
 .token.namespace,
 .token.macro-name,
 .token.macro-name.function,
+.token.variable,
 .token.deleted {
 	color: #ec6b64;
 }
@@ -138,8 +139,7 @@ pre[class*="language-"] {
 /* base0B */
 .token.string,
 .token.insterted,
-.token.attr-value,
-.token.variable {
+.token.attr-value {
 	color: #a9b665;
 }
 

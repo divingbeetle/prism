@@ -1606,6 +1606,11 @@
 		"zig": {
 			"title": "Zig",
 			"owner": "RunDevelopment"
+		},
+		"objdump": {
+			"title": "Objdump",
+			"alias": "objdump",
+			"owner": "dvbeetle"
 		}
 	},
 	"plugins": {
