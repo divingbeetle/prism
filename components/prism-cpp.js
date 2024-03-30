@@ -21,6 +21,8 @@
 			// This also intends to capture the class name of method implementations but here the class has template
 			// parameters, so it can't be a namespace (until C++ adds generic namespaces).
 			/\b\w+(?=\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>\s*::\s*\w+\s*\()/,
+			// Class names w/ template
+			/\b[A-Za-z_]\w*(?=<\s*[A-Za-z_]\w*\s*(>|,))/,
 			// Primitive Types
 			/\b(auto|bool|char|double|float|int|long|short|singed|unsigned|void|wchar_t)\b/,
 			/\b(char16_t|char32_t|char8_t|int16_t|int32_t|int64_t|int8_t|size_t|uint16_t|uint32_t|uint64_t|uint8_t)\b/
