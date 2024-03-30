@@ -84,10 +84,31 @@
 		}
 	});
 
+	Prism.languages.insertBefore('cpp', 'punctuation', {
+		'dot-access': [
+			{
+				alias: 'property',
+				pattern: /(\.)\s*[a-zA-Z_]\w*/,
+				lookbehind: true,
+				inside: {
+					'punctuation': /\./
+				}
+			}
+		]
+	});
+
 	Prism.languages.insertBefore('cpp', 'operator', {
 		'double-colon': {
 			pattern: /::/,
 			alias: 'punctuation'
+		},
+		'arrow-acess': {
+			alias: 'property',
+			pattern: /(->)\s*[a-zA-Z_]\w*/,
+			lookbehind: true,
+			inside: {
+				'operator': /->/
+			},
 		}
 	});
 
